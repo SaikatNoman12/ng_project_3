@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   galSerProBack: any;
   contact: any;
-  signIn: string = 'Sign In';
+  signIn: any;
 
   ngOnInit(): void {
 
@@ -31,8 +31,8 @@ export class HeaderComponent implements OnInit {
   }
 
   signInBtn() {
-    if (this.signIn.toLowerCase() !== 'sign in') {
-      this._headerService.logIn.next('Sign In');
+    if (this.signIn.sign.toLowerCase() !== 'sign in') {
+      this._headerService.logIn.next({ sign: 'Sign In', btnData: '' });
       this.router.navigate(['login']);
     }
     else {

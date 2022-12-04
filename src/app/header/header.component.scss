@@ -89,3 +89,27 @@ h2 a {
   font-size: 16px;
   font-weight: 500;
 }
+
+.signBtn {
+  border: 2px solid rgb(255, 0, 0) !important;
+  color: #000;
+  transition: all 200ms;
+}
+
+.signBtn:hover {
+  // border: 1px solid red !important;
+  background: red;
+  color: #000;
+  color: #fff;
+  box-shadow: 0px 0px 10px red;
+}
+
+.signBtn.buttonActive{
+  border: 2px solid green !important;
+}
+
+.signBtn.buttonActive:hover{
+  border: 2px solid green !important;
+  background-color: green;
+  box-shadow: 0px 0px 10px green;
+}

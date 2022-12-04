@@ -27,8 +27,10 @@
 
   <ng-container>
     <div class="sign-in-btn">
-      <button class="btn btn-outline-primary px-4" type="button" (click)="signInBtn()">
-        {{signIn | titlecase}}
+      <button class="btn px-4 signBtn" type="button" (click)="signInBtn()"
+      [ngClass]="signIn.btnData" 
+      >
+        {{signIn.sign| titlecase}}
       </button>
     </div>
   </ng-container>

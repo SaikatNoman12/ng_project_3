@@ -11,6 +11,6 @@ export class HeaderService {
   // use for gallery-item, products-item & services-item module:-
   galleryBackShow: any = new BehaviorSubject({ text: '', router: '' });
 
-  logIn:any = new BehaviorSubject('Sign In'); 
+  logIn:any = new BehaviorSubject({sign:'Sign In', btnData:''}); 
 
 }

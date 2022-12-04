@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
     }
     else {
       if (refer.value.pass === 'admin') {
-        this._headerService.logIn.next(refer.value.uname);
+        this._headerService.logIn.next({sign:refer.value.uname, btnData:'buttonActive'});
         this.router.navigate(['home']);
       }
       else {
