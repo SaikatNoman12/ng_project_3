@@ -1,3 +1,4 @@
+import { GalleryItem } from './appModal/galleryModal';
 import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 import { NgModule } from '@angular/core';
