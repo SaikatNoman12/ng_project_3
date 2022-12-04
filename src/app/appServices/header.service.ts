@@ -8,6 +8,9 @@ export class HeaderService {
 
   constructor() { }
 
-  galleryBackShow:any = new BehaviorSubject({text:'', router:''});
+  // use for gallery-item, products-item & services-item module:-
+  galleryBackShow: any = new BehaviorSubject({ text: '', router: '' });
+
+  logIn:any = new BehaviorSubject('Sign In'); 
 
 }

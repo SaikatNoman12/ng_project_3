@@ -1,5 +1,6 @@
 import { HeaderService } from './../appServices/header.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private _headerService: HeaderService
+    private _headerService: HeaderService,
+    private router: Router
   ) { }
 
-  galSerProBack:any;
+  galSerProBack: any;
+  contact: any;
+  signIn: string = 'Sign In';
 
   ngOnInit(): void {
 
@@ -20,8 +24,22 @@ export class HeaderComponent implements OnInit {
       this.galSerProBack = res;
     });
 
-    console.log(this.galSerProBack);
+    this._headerService.logIn.subscribe((res: any) => {
+      this.signIn = res;
+    });
 
   }
+
+  signInBtn() {
+    if (this.signIn.toLowerCase() !== 'sign in') {
+      this._headerService.logIn.next('Sign In');
+      this.router.navigate(['login']);
+    }
+    else {
+      this.router.navigate(['login']);
+    }
+  }
+
+
 
 }

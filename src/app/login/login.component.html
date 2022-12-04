@@ -7,30 +7,69 @@
     <p>{{ "Please Sign In" | titlecase }}</p>
   </div>
 
-  <form class="mx-auto">
+  <form
+    class="mx-auto text-start"
+    (ngSubmit)="onFormSubmit(refer)"
+    #refer="ngForm"
+    autocomplete="off"
+  >
     <input
       type="text"
       placeholder="username"
       class="form-control"
       name="uname"
+      ngModel
+      required
+      #uname="ngModel"
     />
+    <small
+      class="text-danger"
+      *ngIf="!uname.valid && uname.touched"
+    >
+      Please enter valid username
+    </small>
 
     <br />
 
     <input
       type="password"
       placeholder="password"
-      class="form-control"
+      class="form-control mt-2"
       name="pass"
+      ngModel
+      required
+      #password="ngModel"
+      autocomplete="off"
     />
+    <small
+      class="text-danger"
+      *ngIf="!password.valid && password.touched"
+    >
+      Please enter your valid password!
+    </small>
 
-    <div class="check-box">
-      <input type="checkbox" id="checked" name="checkData" />
-      <label for="checked">Remember me (admin)</label>
+    <div class="check-data">
+      <div class="check-box">
+        <input
+          type="checkbox"
+          id="checked"
+          name="checkData"
+          ngModel
+          #checkbox="ngModel"
+          required
+        />
+        <label for="checked">Remember me (admin)</label>
+      </div>
+
+      <small *ngIf="checkbox.invalid && checkbox.touched" class="text-danger"
+        >Please checked!</small
+      >
     </div>
 
-    <button class="btn btn-primary px-4" type="submit">
-      {{ "submit" | uppercase }}
-    </button>
+    <div class="text-start mt-3">
+      <button class="btn btn-primary px-4" type="submit">
+        {{ "submit" | uppercase }}
+      </button>
+    </div>
   </form>
 </div>

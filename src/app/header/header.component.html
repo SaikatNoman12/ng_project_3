@@ -25,9 +25,13 @@
     </div>
   </ng-container>
 
-  <div class="sign-in-btn">
-    <button class="btn btn-outline-primary px-4" type="button">Sign In</button>
-  </div>
+  <ng-container>
+    <div class="sign-in-btn">
+      <button class="btn btn-outline-primary px-4" type="button" (click)="signInBtn()">
+        {{signIn | titlecase}}
+      </button>
+    </div>
+  </ng-container>
 
   <!-- <div class="log-name">
         <h6 class="m-0">

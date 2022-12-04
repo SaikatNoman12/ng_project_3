@@ -23,11 +23,17 @@ form {
   width: 400px;
 }
 
+.check-data {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
 .check-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0px;
 }
 
 .check-box input {
