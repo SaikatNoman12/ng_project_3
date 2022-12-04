@@ -7,8 +7,13 @@
     </h2>
     <ng-container *ngIf="galSerProBack.text">
       <div class="back-route">
-        <a class="back-routing" href="#" routerLink="{{ galSerProBack.router }}"
-          ><i class="fas fa-chevron-left"></i> {{ galSerProBack.text }}
+        <a
+          class="back-routing"
+          href="#"
+          routerLink="{{ galSerProBack.router }}"
+        >
+          <i class="fas fa-chevron-left"></i>
+          <span>{{ galSerProBack.text }}</span>
         </a>
       </div>
     </ng-container>
