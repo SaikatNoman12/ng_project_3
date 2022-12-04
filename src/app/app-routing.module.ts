@@ -28,11 +28,12 @@ const routes: Routes = [
     loadChildren: () => import('./gallery/gallery.module')
       .then(m => m.GalleryModule)
   },
-  // {
-  //   path: ':/id',
-  //   loadChildren: () => import('./gallery-item/gallery-item.module')
-  //     .then(m => m.GalleryItemModule)
-  // }
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module')
+      .then(m => m.ProductsModule)
+  },
+
 ];
 
 @NgModule({
