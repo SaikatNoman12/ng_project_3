@@ -5,27 +5,26 @@
     <h2 class="m-0">
       <a href="#">{{ "Logo" | uppercase }}</a>
     </h2>
-      <div class="back-route d-none">
-        <a class="back-routing" href="#"
-          ><i class="fas fa-chevron-left"></i> Go home
+    <ng-container *ngIf="galSerProBack.text">
+      <div class="back-route">
+        <a class="back-routing" href="#" routerLink="{{ galSerProBack.router }}"
+          ><i class="fas fa-chevron-left"></i> {{ galSerProBack.text }}
         </a>
       </div>
+    </ng-container>
   </div>
 
+  <ng-container *ngIf="!galSerProBack.text">
     <div class="header-item">
       <app-header-item></app-header-item>
     </div>
+  </ng-container>
 
-      <div class="sign-in-btn">
-        <button
-          class="btn btn-outline-primary px-4"
-          type="button"
-        >
-          Sign In
-        </button>
-      </div>
+  <div class="sign-in-btn">
+    <button class="btn btn-outline-primary px-4" type="button">Sign In</button>
+  </div>
 
-      <!-- <div class="log-name">
+  <!-- <div class="log-name">
         <h6 class="m-0">
           Welcome <strong class="text-primary"> Noman</strong>
         </h6>

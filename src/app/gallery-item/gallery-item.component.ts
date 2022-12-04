@@ -1,5 +1,6 @@
+import { HeaderService } from './../appServices/header.service';
 import { GalleryItem } from './../appModal/galleryModal';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
@@ -7,11 +8,12 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './gallery-item.component.html',
   styleUrls: ['./gallery-item.component.scss']
 })
-export class GalleryItemComponent implements OnInit {
+export class GalleryItemComponent implements OnInit, OnDestroy {
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private galleryItems: GalleryItem
+    private galleryItems: GalleryItem,
+    private headerService: HeaderService
   ) { }
 
   getRoute: any;
@@ -28,6 +30,13 @@ export class GalleryItemComponent implements OnInit {
     const galleryData = this.galleryItems.galleryItems.filter(ele => ele.id === this.getRouteId);
     this.galleryItem = galleryData[0];
 
+    this.headerService.galleryBackShow.next({ text: 'go back gallery', router: 'gallery' });
+
+  }
+
+
+  ngOnDestroy() {
+    this.headerService.galleryBackShow.next({ text: '', router: '' });
   }
 
 }

@@ -1,9 +1,9 @@
+import { SharedModule } from './../sharedModule/shared.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { HeaderItemComponent } from './header-item/header-item.component';
-
 
 
 @NgModule({
@@ -13,10 +13,10 @@ import { HeaderItemComponent } from './header-item/header-item.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
-  exports:[
-    HeaderComponent
+  exports: [
+    HeaderComponent,
   ]
 })
 export class HeaderModule { }

@@ -1,3 +1,4 @@
+import { HeaderService } from './../appServices/header.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _headerService: HeaderService
+  ) { }
+
+  galSerProBack:any;
 
   ngOnInit(): void {
+
+    this._headerService.galleryBackShow.subscribe((res: any) => {
+      this.galSerProBack = res;
+    });
+
+    console.log(this.galSerProBack);
+
   }
 
 }

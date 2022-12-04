@@ -16,7 +16,7 @@ export class ServiceItem {
         },
         {
             id: '3',
-            name: 'Video Editor',
+            name: 'Video Editing',
             inData: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             img: 'https://cdn.pixabay.com/photo/2022/02/23/09/23/video-editing-7030355__340.jpg',
             router: 'video'

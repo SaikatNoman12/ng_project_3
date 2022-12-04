@@ -1,3 +1,4 @@
+import { SharedModule } from './../sharedModule/shared.module';
 import { GalleryItemComponent } from './gallery-item.component';
 import { GalleryItem } from './../appModal/galleryModal';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,7 @@ import { GalleryItemRoutingModule } from './gallery-item-routing.module';
   ],
   imports: [
     CommonModule,
-    GalleryItemRoutingModule
+    GalleryItemRoutingModule,
   ],
   providers: [
     GalleryItem
@@ -21,7 +22,4 @@ import { GalleryItemRoutingModule } from './gallery-item-routing.module';
   ]
 })
 export class GalleryItemModule { 
-  constructor() {
-      console.log('moduledeeeeed');
-  }
 }
