@@ -40,15 +40,16 @@ export class HeaderComponent implements OnInit {
     translate.setDefaultLang('en');
     translate.use('en');
     this.browserLang = translate.getDefaultLang();
-    // this.browserLang = translate.getBrowserLang(); // same this upper line code.
+    // same this upper line code.
+    /* this.browserLang = translate.getBrowserLang(); */
     this.languageChange();
     this._headerService.translateData.next(this.browserLang);
-    
+
   }
-  
+
   ngOnInit(): void {
   }
-  
+
   signInBtn() {
     if (this.signIn.sign.toLowerCase() !== 'sign in') {
       this._headerService.logIn.next({ sign: 'Sign In', btnData: '' });
@@ -58,7 +59,7 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['login']);
     }
   }
-  
+
   languageSelect(lang: string): void {
     this.translate.use(lang);
     this._headerService.translateData.next(lang);

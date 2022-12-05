@@ -3,7 +3,7 @@
 >
   <div class="logo">
     <h2 class="m-0">
-      <a href="#">{{ "Logo" | uppercase }}</a>
+      <a href="#">{{ 'header.logo' | translate | uppercase }}</a>
     </h2>
     <ng-container *ngIf="galSerProBack.text">
       <div class="back-route">
@@ -19,8 +19,15 @@
     </ng-container>
   </div>
 
-  <ng-container *ngIf="!galSerProBack.text">
+  <!-- 
     <div>{{ "header.menu.text" | translate }}</div>
+    <div [innerHTML]="'header.menu.text' | translate"></div>
+    <div [translate]="'header.menu.text'"></div>
+    <div translate>header.menu.text</div>
+    <div>{{ "header.menu.text" | translate : { 'name': "rahim" } }}</div> 
+  -->
+
+  <ng-container *ngIf="!galSerProBack.text">
     <div class="header-item">
       <app-header-item></app-header-item>
     </div>

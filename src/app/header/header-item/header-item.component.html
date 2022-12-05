@@ -1,28 +1,38 @@
-<nav class="nav">
-  <div>
-  </div>
-  <div></div>
+<!-- <nav class="nav">
   <a
     href="#"
     class="nav-link"
     routerLink="/home"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
-    >Home</a
+    >{{'header.menu.item1' | translate | titlecase}}</a
   >
   <a href="#" class="nav-link" routerLink="/about" routerLinkActive="active"
-    >About Us</a
+    >{{'header.menu.item2' | translate | titlecase}}</a
   >
   <a href="#" class="nav-link" routerLink="/gallery" routerLinkActive="active"
-    >Gallery</a
+    >{{'header.menu.item3' | translate | titlecase}}</a
   >
   <a href="#" class="nav-link" routerLink="/products" routerLinkActive="active"
-    >Products</a
+    >{{'header.menu.item4' | translate | titlecase}}</a
   >
   <a href="#" class="nav-link" routerLink="/services" routerLinkActive="active"
-    >Services</a
+    >{{'header.menu.item5' | translate | titlecase}}</a
   >
   <a href="#" class="nav-link" routerLink="/contact" routerLinkActive="active"
-    >Contact Us</a
+    >{{'header.menu.item6' | translate | titlecase}}</a
   >
+</nav> -->
+
+<nav class="nav">
+  <ng-container *ngFor="let item of 'header-item-arr.menu' | translate">
+    <a
+      href="#"
+      class="nav-link"
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ item | titlecase }}</a
+    >
+  </ng-container>
 </nav>

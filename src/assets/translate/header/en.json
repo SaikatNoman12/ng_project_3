@@ -1,7 +1,24 @@
 {
-    "header":{
-        "menu":{
-         "text":"english"   
+    "header": {
+        "logo": "logo",
+        "menu": {
+            "item1": "home",
+            "item2": "about us",
+            "item3": "gallery",
+            "item4": "products",
+            "item5": "services",
+            "item6": "contact us"
         }
+    },
+    "header-item-arr": {
+        "logo": "logo",
+        "menu": [
+            "home",
+            "about us",
+            "gallery",
+            "products",
+            "services",
+            "contact us"
+        ]
     }
 }
