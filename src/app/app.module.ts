@@ -1,4 +1,4 @@
-import { GalleryItem } from './appModal/galleryModal';
+import { LangTranslateModule } from './sharedModule/lang-translate.module';
 import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 import { NgModule } from '@angular/core';
@@ -15,7 +15,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    LangTranslateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

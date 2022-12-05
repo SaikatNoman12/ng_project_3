@@ -20,17 +20,33 @@
   </div>
 
   <ng-container *ngIf="!galSerProBack.text">
+    <div>{{ "header.menu.text" | translate }}</div>
     <div class="header-item">
       <app-header-item></app-header-item>
     </div>
   </ng-container>
 
   <ng-container>
-    <div class="sign-in-btn">
-      <button class="btn px-4 signBtn" type="button" (click)="signInBtn()"
-      [ngClass]="signIn.btnData" 
+    <div class="sign-in-btn trans-sign">
+      <div class="me-4 lang-translate">
+        <a
+          [class.activeTranslate]="langSwitch === 'en'"
+          (click)="languageSelect('en')"
+          >EN</a
+        >
+        <a
+          [class.activeTranslate]="langSwitch === 'dn'"
+          (click)="languageSelect('dn')"
+          >DN</a
+        >
+      </div>
+      <button
+        class="btn px-4 signBtn"
+        type="button"
+        (click)="signInBtn()"
+        [ngClass]="signIn.btnData"
       >
-        {{signIn.sign| titlecase}}
+        {{ signIn.sign | titlecase }}
       </button>
     </div>
   </ng-container>

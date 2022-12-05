@@ -13,4 +13,6 @@ export class HeaderService {
 
   logIn:any = new BehaviorSubject({sign:'Sign In', btnData:''}); 
 
+  translateData:any = new BehaviorSubject('en');
+
 }

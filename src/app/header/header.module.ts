@@ -1,3 +1,4 @@
+import { LangTranslateModule } from './../sharedModule/lang-translate.module';
 import { SharedModule } from './../sharedModule/shared.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { HeaderItemComponent } from './header-item/header-item.component';
   imports: [
     CommonModule,
     RouterModule,
+    LangTranslateModule
   ],
   exports: [
     HeaderComponent,

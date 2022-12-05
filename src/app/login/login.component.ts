@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { HeaderService } from './../appServices/header.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  @ViewChild('refer') myForm!: NgForm;
 
   constructor(
     private _headerService: HeaderService,
@@ -17,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onFormSubmit(refer: any) {
+  onFormSubmit(refer: NgForm) {
 
     if ((refer.value.uname === '') && (refer.value.pass === '') && refer.value.checkData === false) {
       alert('fill all data');
@@ -42,7 +45,7 @@ export class LoginComponent implements OnInit {
     }
     else {
       if (refer.value.pass === 'admin') {
-        this._headerService.logIn.next({sign:refer.value.uname, btnData:'buttonActive'});
+        this._headerService.logIn.next({ sign: refer.value.uname, btnData: 'buttonActive' });
         this.router.navigate(['home']);
       }
       else {
