@@ -5,22 +5,38 @@
     routerLink="/home"
     routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }"
-    >{{'header.menu.item1' | translate | titlecase}}</a
+    >{{ "header.menu.item1" | translate | titlecase }}</a
   >
-  <a href="#" class="nav-link" routerLink="/about" routerLinkActive="active"
-    >{{'header.menu.item2' | translate | titlecase}}</a
+  <a href="#" class="nav-link" routerLink="/about" routerLinkActive="active">{{
+    "header.menu.item2" | translate | titlecase
+  }}</a>
+  <a
+    href="#"
+    class="nav-link"
+    routerLink="/gallery"
+    routerLinkActive="active"
+    >{{ "header.menu.item3" | translate | titlecase }}</a
   >
-  <a href="#" class="nav-link" routerLink="/gallery" routerLinkActive="active"
-    >{{'header.menu.item3' | translate | titlecase}}</a
+  <a
+    href="#"
+    class="nav-link"
+    routerLink="/products"
+    routerLinkActive="active"
+    >{{ "header.menu.item4" | translate | titlecase }}</a
   >
-  <a href="#" class="nav-link" routerLink="/products" routerLinkActive="active"
-    >{{'header.menu.item4' | translate | titlecase}}</a
+  <a
+    href="#"
+    class="nav-link"
+    routerLink="/services"
+    routerLinkActive="active"
+    >{{ "header.menu.item5" | translate | titlecase }}</a
   >
-  <a href="#" class="nav-link" routerLink="/services" routerLinkActive="active"
-    >{{'header.menu.item5' | translate | titlecase}}</a
-  >
-  <a href="#" class="nav-link" routerLink="/contact" routerLinkActive="active"
-    >{{'header.menu.item6' | translate | titlecase}}</a
+  <a
+    href="#"
+    class="nav-link"
+    routerLink="/contact"
+    routerLinkActive="active"
+    >{{ "header.menu.item6" | translate | titlecase }}</a
   >
 </nav> -->
 
@@ -29,10 +45,10 @@
     <a
       href="#"
       class="nav-link"
-      routerLink="/home"
+      routerLink="{{ item.link }}"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >{{ item | titlecase }}</a
+      >{{ item.text }}</a
     >
   </ng-container>
 </nav>

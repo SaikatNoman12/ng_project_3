@@ -3,7 +3,7 @@
 >
   <div class="logo">
     <h2 class="m-0">
-      <a href="#">{{ 'header.logo' | translate | uppercase }}</a>
+      <a href="#">{{ "header.logo" | translate | uppercase }}</a>
     </h2>
     <ng-container *ngIf="galSerProBack.text">
       <div class="back-route">
@@ -37,11 +37,13 @@
     <div class="sign-in-btn trans-sign">
       <div class="me-4 lang-translate">
         <a
+          routerLink="home"
           [class.activeTranslate]="langSwitch === 'en'"
           (click)="languageSelect('en')"
           >EN</a
         >
         <a
+          routerLink="dn/home"
           [class.activeTranslate]="langSwitch === 'dn'"
           (click)="languageSelect('dn')"
           >DN</a
@@ -53,7 +55,9 @@
         (click)="signInBtn()"
         [ngClass]="signIn.btnData"
       >
-        {{ signIn.sign | titlecase }}
+        {{
+          signIn.sign ? signIn.sign : ("header.sign-in" | translate | titlecase)
+        }}
       </button>
     </div>
   </ng-container>

@@ -8,7 +8,8 @@ import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
-    { prefix: '../../assets/translate/header/', suffix: '.json' }
+    { prefix: '../../assets/translate/header/', suffix: '.json' },
+    { prefix: '../../assets/translate/home/', suffix: '.json' }
   ]);
 }
 

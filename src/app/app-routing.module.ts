@@ -42,6 +42,48 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./contact/contact.module')
       .then(m => m.ContactModule)
+  },
+
+  // dn router
+  {
+    path: '',
+    redirectTo: 'dn/login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dn/login',
+    loadChildren: () => import('./login/login.module')
+      .then(m => m.LoginModule)
+  },
+  {
+    path: 'dn/home',
+    loadChildren: () => import('./home/home.module')
+      .then(m => m.HomeModule)
+  },
+  {
+    path: 'dn/about',
+    loadChildren: () => import('./about/about.module')
+      .then(m => m.AboutModule)
+  },
+  {
+    path: 'dn/gallery',
+    loadChildren: () => import('./gallery/gallery.module')
+      .then(m => m.GalleryModule)
+  },
+  {
+    path: 'dn/products',
+    loadChildren: () => import('./products/products.module')
+      .then(m => m.ProductsModule)
+  },
+  {
+    path: 'dn/services',
+    loadChildren: () => import('./services/services.module')
+      .then(m => m.ServicesModule)
+  },
+  {
+    path: 'dn/contact',
+    loadChildren: () => import('./contact/contact.module')
+      .then(m => m.ContactModule)
   }
 
 ];

@@ -8,17 +8,18 @@
             "item4": "products",
             "item5": "services",
             "item6": "contact us"
-        }
+        },
+        "sign-in":"Sign In"
     },
     "header-item-arr": {
         "logo": "logo",
         "menu": [
-            "home",
-            "about us",
-            "gallery",
-            "products",
-            "services",
-            "contact us"
+            {"text":"home","link":"home"},
+            {"text":"about us", "link":"about"},
+            {"text":"gallery","link":"gallery"},
+            {"text":"products","link":"products"},
+            {"text":"services","link":"services"},
+            {"text":"contact","link":"contact"}
         ]
     }
 }

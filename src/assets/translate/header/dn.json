@@ -8,17 +8,18 @@
             "item4": "Produkte",
             "item5": "Dienstleistungen",
             "item6": "Kontaktiere uns"
-        }
+        },
+        "sign-in":"Einloggen"
     },
     "header-item-arr": {
         "logo": "ˈlōɡō",
         "menu": [
-            "Heim",
-            "Über uns",
-            "Galerie",
-            "Produkte",
-            "Dienstleistungen",
-            "Kontaktiere uns"
+            {"text":"Heim","link":"dn/home"},
+            {"text":"Über uns", "link":"dn/about"},
+            {"text":"Galerie","link":"dn/gallery"},
+            {"text":"Produkte","link":"dn/products"},
+            {"text":"Dienstleistungen","link":"dn/services"},
+            {"text":"Kontaktiere uns","link":"dn/contact"}
         ]
     }
 }

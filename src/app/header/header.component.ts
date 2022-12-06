@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
 
   signInBtn() {
     if (this.signIn.sign.toLowerCase() !== 'sign in') {
-      this._headerService.logIn.next({ sign: 'Sign In', btnData: '' });
+      this._headerService.logIn.next({ sign: '', btnData: '' });
       this.router.navigate(['login']);
     }
     else {

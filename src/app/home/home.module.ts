@@ -1,3 +1,5 @@
+import { HeaderComponent } from './../header/header.component';
+import { LangTranslateModule } from './../sharedModule/lang-translate.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,11 +9,12 @@ import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    LangTranslateModule
   ]
 })
 export class HomeModule { }
