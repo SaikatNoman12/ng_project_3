@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { HeaderService } from './../appServices/header.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private _headerService: HeaderService,
     private router: Router,
+    public translate: TranslateService
   ) { }
 
   ngOnInit(): void {
@@ -46,7 +48,12 @@ export class LoginComponent implements OnInit {
     else {
       if (refer.value.pass === 'admin') {
         this._headerService.logIn.next({ sign: refer.value.uname, btnData: 'buttonActive' });
-        this.router.navigate(['home']);
+        if (window.location.pathname.match('/dn/') || window.location.pathname === '/dn') {
+          this.router.navigate(['dn/home']);
+        }
+        else{
+          this.router.navigate(['home']);
+        }
       }
       else {
         alert('Please enter your valid password');

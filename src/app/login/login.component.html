@@ -1,10 +1,10 @@
 <div class="container border p-3 pb-5 text-center">
   <div class="logo">
-    <h2>{{ "logo" | uppercase }}</h2>
+    <h2>{{ "login.title" | translate | uppercase }}</h2>
   </div>
 
   <div class="sign-in-text">
-    <p>{{ "Please Sign In" | titlecase }}</p>
+    <p>{{ "login.info" | translate | titlecase }}</p>
   </div>
 
   <form
@@ -22,11 +22,8 @@
       required
       #uname="ngModel"
     />
-    <small
-      class="text-danger"
-      *ngIf="!uname.valid && uname.touched"
-    >
-      Please enter valid username
+    <small class="text-danger" *ngIf="!uname.valid && uname.touched">
+      {{ "login.validUsername" | translate }}
     </small>
 
     <br />
@@ -41,11 +38,8 @@
       #password="ngModel"
       autocomplete="off"
     />
-    <small
-      class="text-danger"
-      *ngIf="!password.valid && password.touched"
-    >
-      Please enter your valid password!
+    <small class="text-danger" *ngIf="!password.valid && password.touched">
+      {{ "login.validEmail" | translate }}
     </small>
 
     <div class="check-data">
@@ -58,17 +52,17 @@
           #checkbox="ngModel"
           required
         />
-        <label for="checked">Remember me (admin)</label>
+        <label for="checked">{{ "login.remember" | translate }} (admin)</label>
       </div>
 
-      <small *ngIf="checkbox.invalid && checkbox.touched" class="text-danger"
-        >Please checked!</small
-      >
+      <small *ngIf="checkbox.invalid && checkbox.touched" class="text-danger">{{
+        "login.checked" | translate
+      }}</small>
     </div>
 
     <div class="text-start mt-3">
       <button class="btn btn-primary px-4" type="submit">
-        {{ "submit" | uppercase }}
+        {{ "login.btn" | translate | uppercase }}
       </button>
     </div>
   </form>

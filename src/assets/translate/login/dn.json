@@ -1,0 +1,11 @@
+{
+    "login": {
+        "title": "ˈlōɡō",
+        "info": "Bitte einloggen",
+        "remember": "Erinnere dich an mich",
+        "btn": "einreichen",
+        "validUsername": "Bitte geben Sie einen gültigen Benutzernamen ein!",
+        "validEmail": "Bitte geben Sie Ihr gültiges Passwort ein!",
+        "checked": "Bitte überprüft!"
+    }
+}

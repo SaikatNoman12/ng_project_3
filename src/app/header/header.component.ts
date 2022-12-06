@@ -60,7 +60,10 @@ export class HeaderComponent implements OnInit {
   signInBtn() {
     if (this.signIn.sign.toLowerCase() !== 'sign in') {
       this._headerService.logIn.next({ sign: '', btnData: '' });
-      this.router.navigate(['login']);
+    }
+    
+    if (window.location.pathname.match('/dn/') || window.location.pathname === '/dn') {
+      this.router.navigate(['dn/login']);
     }
     else {
       this.router.navigate(['login']);

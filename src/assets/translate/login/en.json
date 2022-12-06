@@ -1,0 +1,11 @@
+{
+    "login":{
+        "title":"Logo",
+        "info":"Please Sign In",
+        "remember":"Remember me",
+        "btn":"submit",
+        "validUsername":"Please enter valid username",
+        "validEmail":"Please enter your valid password!",
+        "checked":"Please checked!"
+    }
+}

@@ -9,7 +9,8 @@ import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 export function HttpLoaderFactory(_httpBackend: HttpBackend) {
   return new MultiTranslateHttpLoader(_httpBackend, [
     { prefix: '../../assets/translate/header/', suffix: '.json' },
-    { prefix: '../../assets/translate/home/', suffix: '.json' }
+    { prefix: '../../assets/translate/home/', suffix: '.json' },
+    { prefix: '../../assets/translate/login/', suffix: '.json' }
   ]);
 }
 
