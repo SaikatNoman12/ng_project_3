@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   signIn: any;
   langSwitch: any;
   browserLang: any;
-
+  headerStatus: any;
 
   constructor(
     private _headerService: HeaderService,
@@ -35,11 +35,18 @@ export class HeaderComponent implements OnInit {
       this.langSwitch = res;
     });
 
+    _headerService.sendLocation.subscribe((res: any) => {
+      this.headerStatus = res;
+    });
+
+
+
 
     translate.addLangs(['dn', 'en']);
     translate.setDefaultLang('en');
     translate.use('en');
     this.browserLang = translate.getDefaultLang();
+    translate.use('en');
     // same this upper line code.
     /* this.browserLang = translate.getBrowserLang(); */
     this.languageChange();

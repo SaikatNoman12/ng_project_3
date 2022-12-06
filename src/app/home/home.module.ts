@@ -1,5 +1,4 @@
-import { HeaderComponent } from './../header/header.component';
-import { LangTranslateModule } from './../sharedModule/lang-translate.module';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -14,7 +13,9 @@ import { HomeComponent } from './home.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    LangTranslateModule
+    TranslateModule
+  ],
+  providers: [
   ]
 })
 export class HomeModule { }

@@ -37,13 +37,13 @@
     <div class="sign-in-btn trans-sign">
       <div class="me-4 lang-translate">
         <a
-          routerLink="home"
+          [routerLink]="headerStatus"
           [class.activeTranslate]="langSwitch === 'en'"
           (click)="languageSelect('en')"
           >EN</a
         >
         <a
-          routerLink="dn/home"
+          routerLink="dn/{{ headerStatus }}"
           [class.activeTranslate]="langSwitch === 'dn'"
           (click)="languageSelect('dn')"
           >DN</a

@@ -1,4 +1,4 @@
-import { LangTranslateModule } from './sharedModule/lang-translate.module';
+import { RouterModule  } from '@angular/router';
 import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 import { NgModule } from '@angular/core';
@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HeaderModule,
     FooterModule,
-    LangTranslateModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,9 +9,23 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderItemComponent implements OnInit {
 
+  languageStatus: any;
+
   constructor(
+    private _headerService: HeaderService,
     public translate: TranslateService,
-  ) { }
+  ) {
+
+    this._headerService.translateData.subscribe((res: any) => {
+      if (res === 'dn') {
+        this.languageStatus = res;
+      }
+      else {
+        this.languageStatus = '';
+      }
+    });
+
+  }
 
   ngOnInit(): void {
   }

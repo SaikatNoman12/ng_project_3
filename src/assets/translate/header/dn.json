@@ -9,17 +9,35 @@
             "item5": "Dienstleistungen",
             "item6": "Kontaktiere uns"
         },
-        "sign-in":"Einloggen"
+        "sign-in": "Einloggen"
     },
     "header-item-arr": {
         "logo": "ˈlōɡō",
         "menu": [
-            {"text":"Heim","link":"dn/home"},
-            {"text":"Über uns", "link":"dn/about"},
-            {"text":"Galerie","link":"dn/gallery"},
-            {"text":"Produkte","link":"dn/products"},
-            {"text":"Dienstleistungen","link":"dn/services"},
-            {"text":"Kontaktiere uns","link":"dn/contact"}
+            {
+                "text": "Heim",
+                "link": "home"
+            },
+            {
+                "text": "Über uns",
+                "link": "about"
+            },
+            {
+                "text": "Galerie",
+                "link": "gallery"
+            },
+            {
+                "text": "Produkte",
+                "link": "products"
+            },
+            {
+                "text": "Dienstleistungen",
+                "link": "services"
+            },
+            {
+                "text": "Kontaktiere uns",
+                "link": "contact"
+            }
         ]
     }
 }

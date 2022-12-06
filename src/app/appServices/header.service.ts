@@ -6,13 +6,17 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HeaderService {
 
-  constructor() { }
+  constructor() {
+
+  }
 
   // use for gallery-item, products-item & services-item module:-
   galleryBackShow: any = new BehaviorSubject({ text: '', router: '' });
 
-  logIn:any = new BehaviorSubject({sign:'', btnData:''}); 
+  logIn: any = new BehaviorSubject({ sign: '', btnData: '' });
 
-  translateData:any = new BehaviorSubject('en');
+  translateData: any = new BehaviorSubject('en');
+
+  sendLocation: any = new BehaviorSubject('');
 
 }
